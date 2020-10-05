@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name = "CRAirport"
+rootProject.name = "My Application"
