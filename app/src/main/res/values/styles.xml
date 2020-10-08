@@ -8,4 +8,10 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="LoginDialog" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:textColor">@android:color/background_dark</item>
+        <item name="android:background">@android:color/white</item>
+        <item name="colorAccent">@android:color/holo_blue_bright</item>
+    </style>
+
 </resources>
