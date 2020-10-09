@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CreateAccountScreen"></activity>
+        <activity
+            android:name=".CreateAccountScreen"
+            android:screenOrientation="landscape"
+            />
         <activity
             android:name=".LoginScreen"
             android:screenOrientation="landscape">

@@ -1,6 +1,7 @@
 package com.example.crairport;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -35,6 +36,17 @@ public class CreateAccountScreen extends AppCompatActivity {
         String email = ((EditText)findViewById(R.id.editTextTextEmailAddress)).getText().toString();
         String password = ((EditText)findViewById(R.id.editTextTextPassword)).getText().toString();
 
+        if (email.isEmpty() || !email.contains("@")) {
+            // Send Invalid Alert
+            sendInvalidAlert("Invalid Email");
+            return;
+        }
+        if (password.isEmpty()) {
+            //Send Invalid Alert
+            sendInvalidAlert("Empty Password");
+            return;
+        }
+
         auth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, task -> {
                     if (task.isSuccessful()) {
@@ -50,5 +62,22 @@ public class CreateAccountScreen extends AppCompatActivity {
                                 Toast.LENGTH_SHORT).show();
                     }
                 });
+    }
+
+
+    /**
+     * Sends an Alert Dialog
+     * @param message to be shown
+     */
+    private void sendInvalidAlert(String message) {
+        this.runOnUiThread(() -> {
+            AlertDialog alertDialog = new AlertDialog.Builder(CreateAccountScreen.this,
+                    R.style.LoginDialog).create();
+            alertDialog.setTitle("Error");
+            alertDialog.setMessage(message);
+            alertDialog.setButton(AlertDialog.BUTTON_NEUTRAL, "OK",
+                    (dialog, which) -> dialog.dismiss());
+            alertDialog.show();
+        });
     }
 }

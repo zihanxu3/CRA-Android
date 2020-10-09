@@ -37,7 +37,7 @@
 
     <EditText
         android:id="@+id/editTextTextEmailAddress3"
-        android:layout_width="110pt"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="55dp"
         android:ems="10"
@@ -50,7 +50,7 @@
 
     <EditText
         android:id="@+id/editTextTextPassword"
-        android:layout_width="110pt"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="105dp"
         android:ems="10"
