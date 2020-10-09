@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="horizontal"
     tools:context=".CreateAccountScreen">
 
     <ImageView
@@ -25,6 +26,7 @@
         android:layout_marginTop="155dp"
         android:background="@drawable/login_btn1_210_33"
         android:fontFamily="sans-serif-condensed-medium"
+        android:onClick="onButtonCreate"
         android:text="Sign In"
         android:textColor="#EEFFFFFF"
         android:textSize="12sp"
@@ -47,7 +49,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <EditText
-        android:id="@+id/editTextTextPassword3"
+        android:id="@+id/editTextTextPassword"
         android:layout_width="110pt"
         android:layout_height="wrap_content"
         android:layout_marginTop="105dp"

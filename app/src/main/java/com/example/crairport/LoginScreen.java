@@ -72,6 +72,15 @@ public class LoginScreen extends AppCompatActivity {
     }
 
     /**
+     * Sends user to next screen to create new user
+     * @param view The viewable object
+     */
+    public void onCreateClick(View view) {
+        Intent nextScreen = new Intent(this, CreateAccountScreen.class);
+        startActivity(nextScreen);
+    }
+
+    /**
      * Sets up login dialog
      */
     private void setLoginDialog() {
