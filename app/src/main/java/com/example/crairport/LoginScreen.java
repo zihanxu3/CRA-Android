@@ -3,6 +3,7 @@ package com.example.crairport;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ActionBar;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +11,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
@@ -36,8 +39,10 @@ public class LoginScreen extends AppCompatActivity {
         //Start login dialog here
         loginDialog.show();
 
-        String email = ((EditText)findViewById(R.id.editTextTextEmailAddress)).getText().toString();
-        String password = ((EditText) findViewById(R.id.editTextTextPassword)).getText().toString();
+        TextInputLayout emailField = (TextInputLayout)findViewById(R.id.editTextTextEmailAddress);
+        TextInputLayout passwordField = (TextInputLayout)findViewById(R.id.editTextTextPassword);
+        String email = emailField.getEditText().getText().toString();
+        String password = passwordField.getEditText().getText().toString();
 
 
         if (email.isEmpty() || !email.contains("@")) {
@@ -57,8 +62,8 @@ public class LoginScreen extends AppCompatActivity {
                 .addOnCompleteListener(this, task -> {
             if (task.isSuccessful()) {
                 user = AuthUser.getCurrentUser();
-                //Intent nextScreen = new Intent(LoginScreen.this, REPLACE SCREEN CLASS);
-                //startActivity(nextScreen);
+                Intent nextScreen = new Intent(this, HomeScreen.class);
+                startActivity(nextScreen);
             }
             else {
                 //Send Invalid Alert
