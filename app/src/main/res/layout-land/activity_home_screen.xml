@@ -32,12 +32,22 @@
 
     <ImageView
         android:id="@+id/imageView11"
-        android:layout_width="931dp"
-        android:layout_height="185dp"
+        android:layout_width="895dp"
+        android:layout_height="166dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/topbar" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="72dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/avatar_pablo" />
 
     <TextView
         android:id="@+id/textView5"
@@ -134,5 +144,17 @@
         </HorizontalScrollView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="110dp"
+        android:text="Start Learning"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
