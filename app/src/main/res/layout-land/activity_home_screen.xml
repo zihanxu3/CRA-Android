@@ -32,13 +32,12 @@
 
     <ImageView
         android:id="@+id/imageView11"
-        android:layout_width="896dp"
-        android:layout_height="164dp"
+        android:layout_width="734dp"
+        android:layout_height="125dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/topbar" />
+        app:srcCompat="@drawable/main_bar" />
 
     <ImageView
         android:id="@+id/imageView12"
@@ -61,6 +60,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="110dp"
+        android:text="Start Learning"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
@@ -72,9 +83,9 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <HorizontalScrollView
-            android:layout_width="2300px"
+            android:layout_width="2200px"
             android:layout_height="550px"
-            android:layout_marginStart="6dp"
+            android:layout_marginStart="2dp"
             android:fillViewport="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -100,8 +111,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="130dp"
                         android:layout_marginLeft="55dp"
+                        android:layout_marginTop="130dp"
                         android:background="#7ad7d7d7"
                         android:text="Level 1"
                         android:textColor="#000000"
@@ -110,13 +121,12 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="160dp"
                         android:layout_marginLeft="45dp"
+                        android:layout_marginTop="160dp"
                         android:background="#7ad7d7d7"
                         android:text="Description"
                         android:textColor="#000000"
                         android:textSize="13sp" />
-
 
 
                 </RelativeLayout>
@@ -136,8 +146,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="130dp"
                         android:layout_marginLeft="55dp"
+                        android:layout_marginTop="130dp"
                         android:background="#7ad7d7d7"
                         android:text="Level 2"
                         android:textColor="#000000"
@@ -146,8 +156,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="160dp"
                         android:layout_marginLeft="45dp"
+                        android:layout_marginTop="160dp"
                         android:background="#7ad7d7d7"
                         android:text="Description"
                         android:textColor="#000000"
@@ -170,8 +180,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="130dp"
                         android:layout_marginLeft="55dp"
+                        android:layout_marginTop="130dp"
                         android:background="#7ad7d7d7"
                         android:text="Level 3"
                         android:textColor="#000000"
@@ -180,8 +190,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="160dp"
                         android:layout_marginLeft="45dp"
+                        android:layout_marginTop="160dp"
                         android:background="#7ad7d7d7"
                         android:text="Description"
                         android:textColor="#000000"
@@ -203,8 +213,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="130dp"
                         android:layout_marginLeft="55dp"
+                        android:layout_marginTop="130dp"
                         android:background="#7ad7d7d7"
                         android:text="Level 4"
                         android:textColor="#000000"
@@ -213,8 +223,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="160dp"
                         android:layout_marginLeft="45dp"
+                        android:layout_marginTop="160dp"
                         android:background="#7ad7d7d7"
                         android:text="Description"
                         android:textColor="#000000"
@@ -236,8 +246,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="130dp"
                         android:layout_marginLeft="55dp"
+                        android:layout_marginTop="130dp"
                         android:background="#7ad7d7d7"
                         android:text="Level 5"
                         android:textColor="#000000"
@@ -246,8 +256,8 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="160dp"
                         android:layout_marginLeft="45dp"
+                        android:layout_marginTop="160dp"
                         android:background="#7ad7d7d7"
                         android:text="Description"
                         android:textColor="#000000"
@@ -258,17 +268,5 @@
         </HorizontalScrollView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="110dp"
-        android:text="Start Learning"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
