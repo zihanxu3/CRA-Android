@@ -3,7 +3,10 @@ package com.example.crairport;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -49,5 +52,11 @@ public class HomeScreen extends AppCompatActivity {
                         }
                     }
                 });
+    }
+
+    public void clickedLevelOne(View view) {
+        Intent nextScreen = new Intent(this, ChooseGame.class);
+        nextScreen.putExtra("Level", 1);
+        startActivity(nextScreen);
     }
 }

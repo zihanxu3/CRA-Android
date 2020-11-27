@@ -102,10 +102,11 @@
                     android:layout_weight="1">
 
                     <ImageView
-                        android:id="@+id/imageView10"
+                        android:id="@+id/LevelOneImage"
                         android:layout_width="400px"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:onClick="clickedLevelOne"
                         app:srcCompat="@drawable/level_card_7" />
 
                     <TextView
@@ -137,7 +138,7 @@
                     android:layout_weight="1">
 
                     <ImageView
-                        android:id="@+id/imageView9"
+                        android:id="@+id/LevelTwoImage"
                         android:layout_width="400px"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
