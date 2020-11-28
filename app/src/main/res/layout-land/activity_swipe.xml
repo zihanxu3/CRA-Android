@@ -114,26 +114,26 @@
         app:srcCompat="@drawable/match_card1" />
 
     <TextView
-        android:id="@+id/textView12"
+        android:id="@+id/rightCard"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="100dp"
         android:text="Bye bye"
         android:textSize="25sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView14"
+        app:layout_constraintEnd_toEndOf="@+id/imageView14"
         app:layout_constraintStart_toStartOf="@+id/imageView14"
         app:layout_constraintTop_toTopOf="@+id/imageView14" />
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/leftCard"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="100dp"
         android:text="Good Morning"
         android:textSize="25sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView13"
+        app:layout_constraintEnd_toEndOf="@+id/imageView13"
         app:layout_constraintStart_toStartOf="@+id/imageView13"
         app:layout_constraintTop_toTopOf="@+id/imageView13" />
 

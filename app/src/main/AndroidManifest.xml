@@ -14,7 +14,8 @@
         <activity android:name=".MatchingGame" />
         <activity
             android:name=".SwipeActivity"
-            android:label="@string/title_activity_swipe" />
+            android:label="@string/title_activity_swipe"
+            android:screenOrientation="landscape"/>
         <!--
                Set to true if your app is Standalone, that is, it does not require the handheld
                app to run.
@@ -36,5 +37,6 @@
             </intent-filter>
         </activity>
     </application>
-
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 </manifest>
