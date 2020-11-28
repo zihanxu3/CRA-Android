@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.crairport">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,13 +12,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ChooseGame"
+        <activity android:name=".SpeakingTest"
             android:screenOrientation="landscape"></activity>
+        <activity
+            android:name=".BowlingGame"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".ChooseGame"
+            android:screenOrientation="landscape" />
         <activity android:name=".MatchingGame" />
         <activity
             android:name=".SwipeActivity"
             android:label="@string/title_activity_swipe"
-            android:screenOrientation="landscape"/>
+            android:screenOrientation="landscape" />
         <!--
                Set to true if your app is Standalone, that is, it does not require the handheld
                app to run.
@@ -37,6 +46,5 @@
             </intent-filter>
         </activity>
     </application>
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
 </manifest>

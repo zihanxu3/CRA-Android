@@ -13,7 +13,7 @@
         android:layout_marginStart="76dp"
         android:onClick="onMatchingGame"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/BowlingImage"
+        app:layout_constraintEnd_toStartOf="@+id/speakingImage"
         app:layout_constraintHorizontal_bias="0.357"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -21,9 +21,10 @@
         app:srcCompat="@drawable/match_card2" />
 
     <ImageView
-        android:id="@+id/BowlingImage"
+        android:id="@+id/speakingImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="onSpeakingGame"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.766"
@@ -45,15 +46,15 @@
         app:layout_constraintTop_toTopOf="@+id/MatchingImage" />
 
     <TextView
-        android:id="@+id/bowlingText"
+        android:id="@+id/speakingText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Bowling"
+        android:text="Speaking Test"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/BowlingImage"
-        app:layout_constraintEnd_toEndOf="@+id/BowlingImage"
-        app:layout_constraintStart_toStartOf="@+id/BowlingImage"
-        app:layout_constraintTop_toTopOf="@+id/BowlingImage" />
+        app:layout_constraintBottom_toBottomOf="@+id/speakingImage"
+        app:layout_constraintEnd_toEndOf="@+id/speakingImage"
+        app:layout_constraintStart_toStartOf="@+id/speakingImage"
+        app:layout_constraintTop_toTopOf="@+id/speakingImage" />
 
     <TextView
         android:id="@+id/textView15"

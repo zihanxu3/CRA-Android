@@ -23,4 +23,12 @@ public class ChooseGame extends AppCompatActivity {
         //nextScreen.putExtra("Level", level);
         startActivity(nextScreen);
     }
+
+    public void onSpeakingGame(View view) {
+        Intent nextScreen = new Intent(this, SpeakingTest.class);
+        //Fix this later
+        //int level = currentScreen.getIntExtra("Level", 1);
+        //nextScreen.putExtra("Level", level);
+        startActivity(nextScreen);
+    }
 }

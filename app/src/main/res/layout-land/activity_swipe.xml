@@ -130,6 +130,7 @@
         android:id="@+id/leftCard"
         android:layout_width="162dp"
         android:layout_height="84dp"
+        android:gravity="center"
         android:text="Good Morning"
         android:textSize="25sp"
         android:textStyle="bold"
