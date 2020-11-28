@@ -94,7 +94,7 @@
         app:srcCompat="@drawable/avatar_pablo" />
 
     <ImageView
-        android:id="@+id/imageView13"
+        android:id="@+id/leftImage"
         android:layout_width="230dp"
         android:layout_height="230dp"
         android:layout_marginStart="100dp"
@@ -104,37 +104,38 @@
         app:srcCompat="@drawable/match_card2" />
 
     <ImageView
-        android:id="@+id/imageView14"
+        android:id="@+id/rightImage"
         android:layout_width="230dp"
         android:layout_height="230dp"
         android:layout_marginStart="60dp"
         android:layout_marginTop="120dp"
-        app:layout_constraintStart_toEndOf="@+id/imageView13"
+        app:layout_constraintStart_toEndOf="@+id/leftImage"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/match_card1" />
 
     <TextView
         android:id="@+id/rightCard"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="133dp"
+        android:layout_height="80dp"
+        android:gravity="center"
         android:text="Bye bye"
         android:textSize="25sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView14"
-        app:layout_constraintEnd_toEndOf="@+id/imageView14"
-        app:layout_constraintStart_toStartOf="@+id/imageView14"
-        app:layout_constraintTop_toTopOf="@+id/imageView14" />
+        app:layout_constraintBottom_toBottomOf="@+id/rightImage"
+        app:layout_constraintEnd_toEndOf="@+id/rightImage"
+        app:layout_constraintStart_toStartOf="@+id/rightImage"
+        app:layout_constraintTop_toTopOf="@+id/rightImage" />
 
     <TextView
         android:id="@+id/leftCard"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="162dp"
+        android:layout_height="84dp"
         android:text="Good Morning"
         android:textSize="25sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView13"
-        app:layout_constraintEnd_toEndOf="@+id/imageView13"
-        app:layout_constraintStart_toStartOf="@+id/imageView13"
-        app:layout_constraintTop_toTopOf="@+id/imageView13" />
+        app:layout_constraintBottom_toBottomOf="@+id/leftImage"
+        app:layout_constraintEnd_toEndOf="@+id/leftImage"
+        app:layout_constraintStart_toStartOf="@+id/leftImage"
+        app:layout_constraintTop_toTopOf="@+id/leftImage" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
