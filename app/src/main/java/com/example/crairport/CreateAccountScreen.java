@@ -1,20 +1,20 @@
 package com.example.crairport;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
+import com.google.android.material.textfield.TextInputEditText;
+import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class CreateAccountScreen extends AppCompatActivity {
 
@@ -34,8 +34,15 @@ public class CreateAccountScreen extends AppCompatActivity {
      */
     public void onButtonCreate(View view) {
 
-        String email = ((EditText)findViewById(R.id.editTextTextEmailAddress)).getText().toString();
-        String password = ((EditText)findViewById(R.id.editTextTextPassword)).getText().toString();
+        String email = ((TextInputLayout)findViewById(R.id.emailField))
+                .getEditText().getText().toString();
+        String password = ((TextInputLayout)findViewById(R.id.passwordField))
+                .getEditText().getText().toString();
+        String firstName = ((TextInputLayout) findViewById(R.id.firstNameField))
+                .getEditText().getText().toString();
+        String lastName = ((TextInputLayout) findViewById(R.id.lastNameField))
+                .getEditText().getText().toString();
+
 
         if (email.isEmpty() || !email.contains("@")) {
             // Send Invalid Alert
@@ -48,6 +55,18 @@ public class CreateAccountScreen extends AppCompatActivity {
             return;
         }
 
+        if (firstName.isEmpty()) {
+            //Send Invalid Alert
+            sendInvalidAlert("Empty First Name");
+            return;
+        }
+
+        if (lastName.isEmpty()) {
+            //Send Invalid Alert
+            sendInvalidAlert("Empty Last Name");
+            return;
+        }
+
         auth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, task -> {
                     if (task.isSuccessful()) {
@@ -55,6 +74,15 @@ public class CreateAccountScreen extends AppCompatActivity {
                         Toast.makeText(CreateAccountScreen.this, "Worked",
                                 Toast.LENGTH_SHORT).show();
                         // Send to next screen
+                        Map<String, Object> data = new HashMap<>();
+                        data.put("experience", 0);
+                        data.put("first name", firstName);
+                        data.put("last name", lastName);
+                        data.put("level", 1);
+                        FirebaseFirestore.getInstance().collection("users")
+                                .document(email).set(data);
+                        finish();
+
 
                     }
                     else {
@@ -66,8 +94,7 @@ public class CreateAccountScreen extends AppCompatActivity {
     }
 
     public void onHaveAccountClick(View view) {
-        Intent nextScreen = new Intent(this, LoginScreen.class);
-        startActivity(nextScreen);
+        finish();
     }
 
     /**

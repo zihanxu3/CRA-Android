@@ -3,15 +3,11 @@ package com.example.crairport;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.ActionBar;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
-import android.widget.EditText;
 
-import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -40,7 +36,7 @@ public class LoginScreen extends AppCompatActivity {
         loginDialog.show();
 
         TextInputLayout emailField = (TextInputLayout)findViewById(R.id.editTextTextEmailAddress);
-        TextInputLayout passwordField = (TextInputLayout)findViewById(R.id.editTextTextPassword);
+        TextInputLayout passwordField = (TextInputLayout)findViewById(R.id.passwordField);
         String email = emailField.getEditText().getText().toString();
         String password = passwordField.getEditText().getText().toString();
 
