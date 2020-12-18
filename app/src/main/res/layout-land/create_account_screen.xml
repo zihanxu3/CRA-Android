@@ -120,6 +120,7 @@
         android:layout_height="40dp"
         android:layout_marginTop="230dp"
         android:gravity="center"
+        android:onClick="onHaveAccountClick"
         android:text="Already have an account? Or wish to sign in using Facebook or Google instead? Click here."
         android:textSize="13sp"
         app:layout_constraintEnd_toEndOf="parent"

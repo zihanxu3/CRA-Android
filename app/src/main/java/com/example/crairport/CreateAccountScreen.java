@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -64,6 +65,10 @@ public class CreateAccountScreen extends AppCompatActivity {
                 });
     }
 
+    public void onHaveAccountClick(View view) {
+        Intent nextScreen = new Intent(this, LoginScreen.class);
+        startActivity(nextScreen);
+    }
 
     /**
      * Sends an Alert Dialog
