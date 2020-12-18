@@ -67,10 +67,8 @@ public class SpeakingTest extends AppCompatActivity {
 
             //Get AudioFile name
             String audioFile = allPossible.get(index);
-            mediaPlayer = new MediaPlayer();
-            mediaPlayer.setDataSource(this, Uri.parse("android.resource://"
-                    + this.getPackageName() + "res/raw" + audioFile + ".mp3"));
-            mediaPlayer.prepare();
+            int resId = getResources().getIdentifier(audioFile, "raw", getPackageName());
+            mediaPlayer = MediaPlayer.create(this, resId);
             mediaPlayer.start();
 
         } catch (IOException e) {
