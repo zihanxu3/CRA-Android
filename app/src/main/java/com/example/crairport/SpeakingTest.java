@@ -20,6 +20,7 @@ public class SpeakingTest extends AppCompatActivity {
 
 
     private int index;
+    private ArrayList<String> allText;
     private MediaPlayer mediaPlayer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +39,7 @@ public class SpeakingTest extends AppCompatActivity {
                 allPossible.add(phrase);
             }
 
+            this.allText = allPossible;
             // Randomly pick idx
             Random randomizer = new Random();
             index = randomizer.nextInt(allPossible.size());
@@ -74,5 +76,11 @@ public class SpeakingTest extends AppCompatActivity {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public void nextTest(View view) {
+        TextView textView = findViewById(R.id.promptText);
+        this.index += 1;
+        textView.setText(this.allText.get((index) % (this.allText.size())));
     }
 }

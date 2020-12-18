@@ -31,4 +31,12 @@ public class ChooseGame extends AppCompatActivity {
         //nextScreen.putExtra("Level", level);
         startActivity(nextScreen);
     }
+
+    public void onBowlingGame(View view) {
+        Intent nextScreen = new Intent(this, BowlingGame.class);
+        //Fix this later
+        //int level = currentScreen.getIntExtra("Level", 1);
+        //nextScreen.putExtra("Level", level);
+        startActivity(nextScreen);
+    }
 }

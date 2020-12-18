@@ -86,9 +86,9 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <HorizontalScrollView
-            android:layout_width="2200px"
+            android:layout_width="0dp"
             android:layout_height="550px"
-            android:layout_marginStart="2dp"
+            android:layout_marginStart="4dp"
             android:fillViewport="true"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -123,14 +123,14 @@
                         android:textSize="15sp" />
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="70sp"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="45dp"
                         android:layout_marginTop="160dp"
                         android:background="#7ad7d7d7"
-                        android:text="Description"
+                        android:text="Build your foundation and learn basic terms."
                         android:textColor="#000000"
-                        android:textSize="13sp" />
+                        android:textSize="10sp" />
 
 
                 </RelativeLayout>
@@ -158,14 +158,14 @@
                         android:textSize="15sp" />
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="70sp"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="45dp"
                         android:layout_marginTop="160dp"
                         android:background="#7ad7d7d7"
-                        android:text="Description"
+                        android:text="Build your foundation and learn basic terms."
                         android:textColor="#000000"
-                        android:textSize="13sp" />
+                        android:textSize="10sp" />
 
                 </RelativeLayout>
 
@@ -192,14 +192,14 @@
                         android:textSize="15sp" />
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="70sp"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="45dp"
                         android:layout_marginTop="160dp"
                         android:background="#7ad7d7d7"
-                        android:text="Description"
+                        android:text="Build your foundation and learn basic terms."
                         android:textColor="#000000"
-                        android:textSize="13sp" />
+                        android:textSize="10sp" />
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -225,14 +225,14 @@
                         android:textSize="15sp" />
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="70sp"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="45dp"
-                        android:layout_marginTop="160dp"
+                        android:layout_marginTop="150dp"
                         android:background="#7ad7d7d7"
-                        android:text="Description"
+                        android:text="Build your foundation and learn basic terms and phrases that you will need for your job."
                         android:textColor="#000000"
-                        android:textSize="13sp" />
+                        android:textSize="10sp" />
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -258,14 +258,14 @@
                         android:textSize="15sp" />
 
                     <TextView
-                        android:layout_width="wrap_content"
+                        android:layout_width="70sp"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="45dp"
-                        android:layout_marginTop="160dp"
+                        android:layout_marginTop="150dp"
                         android:background="#7ad7d7d7"
-                        android:text="Description"
+                        android:text="Build your foundation and learn basic terms and phrases that you will need for your job."
                         android:textColor="#000000"
-                        android:textSize="13sp" />
+                        android:textSize="10sp" />
                 </RelativeLayout>
 
             </LinearLayout>

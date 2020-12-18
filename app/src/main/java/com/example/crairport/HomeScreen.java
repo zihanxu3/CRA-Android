@@ -55,8 +55,7 @@ public class HomeScreen extends AppCompatActivity {
     }
 
     public void clickedLevelOne(View view) {
-        Intent nextScreen = new Intent(this, ChooseGame.class);
-        nextScreen.putExtra("Level", 1);
+        Intent nextScreen = new Intent(this, MapActivity.class);
         startActivity(nextScreen);
     }
 }

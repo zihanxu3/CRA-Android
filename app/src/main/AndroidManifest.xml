@@ -9,7 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".simulationActivity"></activity>
+        <activity
+            android:name=".MapActivity"
+            android:screenOrientation="landscape" />
+        <activity android:name=".simulationActivity" />
         <activity
             android:name=".SpeakingTest"
             android:screenOrientation="landscape" />
@@ -20,6 +23,7 @@
             android:name=".ChooseGame"
             android:screenOrientation="landscape" />
         <activity android:name=".MatchingGame" />
+
         <activity
             android:name=".SwipeActivity"
             android:label="@string/title_activity_swipe"
@@ -45,8 +49,8 @@
             </intent-filter>
         </activity>
     </application>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
 </manifest>
