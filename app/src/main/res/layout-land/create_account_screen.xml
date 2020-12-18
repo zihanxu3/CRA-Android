@@ -39,7 +39,7 @@
         android:id="@+id/editTextTextEmailAddress3"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="250dp"
-        android:layout_height="42dp"
+        android:layout_height="50dp"
         android:layout_marginTop="55dp"
         android:ems="10"
         android:hint="Email Address"
@@ -51,7 +51,8 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent"
+            android:textSize="12sp" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -59,7 +60,7 @@
         android:id="@+id/editTextTextPassword"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="250dp"
-        android:layout_height="42dp"
+        android:layout_height="50dp"
         android:layout_marginTop="105dp"
         android:ems="10"
         android:hint="Password"
@@ -71,9 +72,11 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent"
+            android:textSize="12sp" />
 
     </com.google.android.material.textfield.TextInputLayout>
+
     <TextView
         android:id="@+id/textView2"
         android:layout_width="425dp"
@@ -132,7 +135,7 @@
         android:id="@+id/editText"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="110dp"
-        android:layout_height="40dp"
+        android:layout_height="50dp"
         android:layout_marginStart="24dp"
         android:layout_marginEnd="240dp"
         android:hint="Last Name"
@@ -142,7 +145,8 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent"
+            android:textSize="12sp" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -150,16 +154,17 @@
         android:id="@+id/textInputEditText2"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="110dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="240dp"
-        android:layout_marginTop="8dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="4dp"
         android:hint="First Name"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent"
+            android:textSize="12sp" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
