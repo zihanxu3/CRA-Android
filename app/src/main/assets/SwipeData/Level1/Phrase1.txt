@@ -1,0 +1,30 @@
+Morning
+Afternoon
+Evening
+Good morning
+Good afternoon
+Good evening
+Hi
+Hello
+How are you?
+How are you doing?
+How do you do?
+Night
+Goodnight
+Have a nice day
+Have a good day
+Have a good vacation
+Have a good weekend
+Have a good week
+Have a good night
+Have a good one
+Have a safe journey
+Bye
+Bye-bye
+Goodbye
+Enjoy the rest of the day (attempt at the end)
+Enjoy the rest of the day
+Thanks, same
+Thank you, you too
+Good, thanks
+Fine, thank you
