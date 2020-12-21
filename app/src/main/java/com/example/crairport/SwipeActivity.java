@@ -35,8 +35,8 @@ public class SwipeActivity extends AppCompatActivity implements GamePopFragment.
 
         String level = current.getStringExtra("Level");
 
-        String fileName1 = String.format("SwipeData/%s/Phrase1.txt", level);
-        String fileName2 = String.format("SwipeData/%s/Phrase2.txt", level);
+        String fileName1 = String.format("SwipeData/Level%s/Phrase1.txt", level);
+        String fileName2 = String.format("SwipeData/Level%s/Phrase2.txt", level);
 
         System.out.println("reached line 41");
         System.out.println(fileName1);
