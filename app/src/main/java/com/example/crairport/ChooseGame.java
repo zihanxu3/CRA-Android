@@ -20,7 +20,11 @@ public class ChooseGame extends AppCompatActivity {
 
         Intent currentScreen = getIntent();
         String level = currentScreen.getStringExtra("Level");
+        String mode = "image";
+
+        // TODO: `mode` is adaptive to the game process, it takes values `phrase` or `image`
         nextScreen.putExtra("Level", level);
+        nextScreen.putExtra("Mode", mode);
         startActivity(nextScreen);
     }
 
