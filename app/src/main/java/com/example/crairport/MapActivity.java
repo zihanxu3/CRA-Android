@@ -16,7 +16,9 @@ public class MapActivity extends AppCompatActivity {
 
     public void onClickStartChoose(View view) {
         Intent nextScreen = new Intent(this, ChooseGame.class);
-        nextScreen.putExtra("Level", 1);
+
+        // TODO: Replace this with current level of user, retrieved from Firebase
+        nextScreen.putExtra("Level", "Level1");
         startActivity(nextScreen);
     }
 }

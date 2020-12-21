@@ -8,7 +8,6 @@ import android.view.View;
 
 public class ChooseGame extends AppCompatActivity {
 
-    private Intent currentScreen = getIntent();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,9 +17,10 @@ public class ChooseGame extends AppCompatActivity {
 
     public void onMatchingGame(View view) {
         Intent nextScreen = new Intent(this, SwipeActivity.class);
-        //Fix this later
-        //int level = currentScreen.getIntExtra("Level", 1);
-        //nextScreen.putExtra("Level", level);
+
+        Intent currentScreen = getIntent();
+        String level = currentScreen.getStringExtra("Level");
+        nextScreen.putExtra("Level", level);
         startActivity(nextScreen);
     }
 

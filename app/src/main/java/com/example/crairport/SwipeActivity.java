@@ -16,22 +16,13 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
-//implements View.OnTouchListener,
-//        GestureDetector.OnGestureListener, View.OnDragListener
-
 public class SwipeActivity extends AppCompatActivity implements GamePopFragment.GamePopFragmentListener {
 
-//    float dX;
-//    float dY;
-//    int lastAction;
     int totalPoints, currentPoints;
     int index_1, index_2;
     ArrayList<String> phraseOneArray = new ArrayList<>();
     ArrayList<String> phraseTwoArray = new ArrayList<>();
 
-
-//    private ImageView rightImage, leftImage;
-//    private GestureDetector gDetector;
 
 
     @Override
@@ -39,25 +30,26 @@ public class SwipeActivity extends AppCompatActivity implements GamePopFragment.
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_swipe);
 
-//        rightImage = (ImageView) findViewById(R.id.rightImage);
-//        leftImage = (ImageView) findViewById(R.id.leftImage);
-
-//        rightImage.setOnTouchListener(this);
-//        leftImage.setOnTouchListener(this);
-//        gDetector = new GestureDetector(this, this);
-
         // Read file
         Intent current = getIntent();
+
+        String level = current.getStringExtra("Level");
+
+        String fileName1 = String.format("SwipeData/%s/Phrase1.txt", level);
+        String fileName2 = String.format("SwipeData/%s/Phrase2.txt", level);
+
+        System.out.println("reached line 41");
+        System.out.println(fileName1);
         // Change this for every level
         try {
-            InputStream in = getAssets().open("SwipeData/Level1/Phrase1.txt");
+            InputStream in = getAssets().open(fileName1);
             BufferedReader bf = new BufferedReader(new InputStreamReader(in));
             String phrase = "";
             while ((phrase = bf.readLine()) != null) {
                 phraseOneArray.add(phrase);
             }
 
-            InputStream in2 = getAssets().open("SwipeData/Level1/Phrase2.txt");
+            InputStream in2 = getAssets().open(fileName2);
             BufferedReader bf2 = new BufferedReader(new InputStreamReader(in2));
             String phrase2 = "";
             while ((phrase2 = bf2.readLine()) != null) {
@@ -73,18 +65,6 @@ public class SwipeActivity extends AppCompatActivity implements GamePopFragment.
             TextView rightCard = (TextView) findViewById(R.id.rightCard);
             rightCard.setText(phraseTwoArray.get(index_2));
 
-
-
-//            // Randomly pick two indexes
-//            Random randomizer = new Random();
-//            int firstIdx = randomizer.nextInt(allPossible.size());
-//            int secondIdx = randomizer.nextInt(allPossible.size());
-//
-//            TextView leftCard = (TextView) findViewById(R.id.leftCard);
-//            TextView rightCard = (TextView) findViewById(R.id.rightCard);
-//
-//            leftCard.setText(allPossible.get(firstIdx));
-//            rightCard.setText(allPossible.get(secondIdx));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -95,66 +75,7 @@ public class SwipeActivity extends AppCompatActivity implements GamePopFragment.
         scoreText.setText(String.format("Score : %s / %s", currentPoints, totalPoints));
 
     }
-//    @Override
-//    public boolean onTouch(View view, MotionEvent event) {
-//        gDetector.onTouchEvent(event);
-//        switch (event.getActionMasked()) {
-//            case MotionEvent.ACTION_DOWN:
-//                dX = view.getX() - event.getRawX();
-//                dY = view.getY() - event.getRawY();
-//                lastAction = MotionEvent.ACTION_DOWN;
-//                break;
-//
-//            case MotionEvent.ACTION_MOVE:
-//                view.setY(event.getRawY() + dY);
-//                view.setX(event.getRawX() + dX);
-//                lastAction = MotionEvent.ACTION_MOVE;
-//                break;
-//
-//            case MotionEvent.ACTION_UP:
-//                break;
-//
-//            default:
-//                return false;
-//        }
-//        return true;
-//    }
-//
-//    @Override
-//    public boolean onDown(MotionEvent motionEvent) {
-//        return false;
-//    }
-//
-//    @Override
-//    public void onShowPress(MotionEvent motionEvent) {
-//
-//    }
-//
-//    @Override
-//    public boolean onSingleTapUp(MotionEvent motionEvent) {
-//        return false;
-//    }
-//
-//    @Override
-//    public boolean onScroll(MotionEvent motionEvent, MotionEvent motionEvent1, float v, float v1) {
-//        return false;
-//    }
-//
-//    @Override
-//    public void onLongPress(MotionEvent motionEvent) {
-//
-//    }
-//
-//    @Override
-//    public boolean onFling(MotionEvent motionEvent, MotionEvent motionEvent1, float v, float v1) {
-//        return false;
-//    }
-//
-//    @Override
-//    public boolean onDrag(View view, DragEvent dragEvent) {
-//        return true;
-//    }
-//
+
 
     public void onClickMatched(View view) {
 
@@ -165,12 +86,12 @@ public class SwipeActivity extends AppCompatActivity implements GamePopFragment.
         }
 
         // Set scores
-        currentPoints += index_1 == index_2 ? 1 : 0;
+        currentPoints += index_1 == index_2 || phraseOneArray.get(index_1) == phraseOneArray.get(index_2) ? 1 : 0;
         TextView scoreText = (TextView) findViewById(R.id.scoreText);
         scoreText.setText(String.format("Score : %s / %s", currentPoints, totalPoints));
 
         //TODO: Add Toast here
-        Toast.makeText(SwipeActivity.this, index_1 != index_2 ? "Incorrect" : "Correct",
+        Toast.makeText(SwipeActivity.this, index_1 == index_2 || phraseOneArray.get(index_1) == phraseOneArray.get(index_2) ? "Correct" : "Incorrect",
                 Toast.LENGTH_SHORT).show();
 
         //TODO: Go to next index
@@ -200,11 +121,11 @@ public class SwipeActivity extends AppCompatActivity implements GamePopFragment.
             return;
         }
         // Set scores
-        currentPoints += index_1 != index_2 ? 1 : 0;
+        currentPoints += index_1 == index_2 || phraseOneArray.get(index_1) == phraseOneArray.get(index_2) ? 0 : 1;
         TextView scoreText = (TextView) findViewById(R.id.scoreText);
         scoreText.setText(String.format("Score : %s / %s", currentPoints, totalPoints));
 
-        Toast.makeText(SwipeActivity.this, index_1 == index_2 ? "Incorrect" : "Correct",
+        Toast.makeText(SwipeActivity.this, index_1 == index_2 || phraseOneArray.get(index_1) == phraseOneArray.get(index_2) ? "Incorrect" : "Correct",
                 Toast.LENGTH_SHORT).show();
 
         //TODO: Go to next index
