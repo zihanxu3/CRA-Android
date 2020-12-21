@@ -43,7 +43,7 @@ public class SwipeActivity extends AppCompatActivity implements GamePopFragment.
         String level = current.getStringExtra("Level");
         this.mode = current.getStringExtra("Mode");
 
-        if (mode == "phrase") {
+        if (mode.equals("phrase")) {
             String fileName1 = String.format("SwipeData/Level%s/Phrase1.txt", level);
             String fileName2 = String.format("SwipeData/Level%s/Phrase2.txt", level);
 
@@ -73,6 +73,8 @@ public class SwipeActivity extends AppCompatActivity implements GamePopFragment.
 
                 TextView rightCard = (TextView) findViewById(R.id.rightCard);
                 rightCard.setText(phraseTwoArray.get(index_2));
+
+                System.out.println(phraseOneArray);
 
             } catch (IOException e) {
                 e.printStackTrace();
@@ -111,8 +113,6 @@ public class SwipeActivity extends AppCompatActivity implements GamePopFragment.
 
                 TextView rightCard = (TextView) findViewById(R.id.rightCard);
                 rightCard.setText(phraseTwoArray.get(index_2));
-
-                System.out.println(phraseOneArray);
 
             } catch (IOException e) {
                 e.printStackTrace();
