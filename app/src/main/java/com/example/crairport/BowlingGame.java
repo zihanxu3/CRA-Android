@@ -179,6 +179,8 @@ public class BowlingGame extends AppCompatActivity implements GamePopFragment.Ga
 
                         if (index_1 + 1 == totalPoints) {
                             index_1 += 1;
+                            String score = String.format("%s / %s", currentPoints, totalPoints);
+                            showNoticeDialog(score);
                             break;
                         }
 
@@ -215,6 +217,8 @@ public class BowlingGame extends AppCompatActivity implements GamePopFragment.Ga
 
                         if (index_1 + 1 == totalPoints) {
                             index_1 += 1;
+                            String score = String.format("%s / %s", currentPoints, totalPoints);
+                            showNoticeDialog(score);
                             break;
                         }
 
