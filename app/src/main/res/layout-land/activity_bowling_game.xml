@@ -14,8 +14,8 @@
         android:layout_marginTop="60dp"
         android:layout_marginEnd="270dp"
         android:text="Level 1"
-        android:textSize="10sp"
         android:textColor="@color/common_google_signin_btn_text_light_default"
+        android:textSize="10sp"
         app:backgroundTint="@color/design_default_color_secondary_variant"
         app:cornerRadius="30sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,10 +28,10 @@
         android:layout_height="40dp"
         android:layout_marginTop="60dp"
         android:layout_marginEnd="120dp"
-        android:textColor="@color/common_google_signin_btn_text_light_default"
-        app:backgroundTint="@color/design_default_color_background"
         android:text="120/150 points"
+        android:textColor="@color/common_google_signin_btn_text_light_default"
         android:textSize="10sp"
+        app:backgroundTint="@color/design_default_color_background"
         app:cornerRadius="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -43,23 +43,13 @@
         android:layout_height="40dp"
         android:layout_marginTop="60dp"
         android:layout_marginEnd="20dp"
-        android:textColor="@color/common_google_signin_btn_text_light_default"
-        app:backgroundTint="@color/design_default_color_background"
         android:text="260 stars"
+        android:textColor="@color/common_google_signin_btn_text_light_default"
         android:textSize="10sp"
+        app:backgroundTint="@color/design_default_color_background"
         app:cornerRadius="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView27"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="60dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView22"
-        app:layout_constraintEnd_toEndOf="@+id/imageView22"
-        app:layout_constraintStart_toStartOf="@+id/imageView22"
-        app:srcCompat="@drawable/up_arrow" />
 
     <ImageView
         android:id="@+id/imageView18"
@@ -100,74 +90,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/setting_icon" />
 
-    <ImageView
-        android:id="@+id/imageView22"
-        android:layout_width="680dp"
-        android:layout_height="315dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView18"
-        app:srcCompat="@drawable/bowling_rack" />
-
-    <ImageView
-        android:id="@+id/imageView23"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_marginStart="70dp"
-        android:layout_marginTop="40dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView18"
-        app:srcCompat="@drawable/balls" />
-
-    <ImageView
-        android:id="@+id/imageView24"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_marginStart="480dp"
-        android:layout_marginTop="40dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView18"
-        app:srcCompat="@drawable/balls" />
-
-    <ImageView
-        android:id="@+id/imageView25"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:layout_marginStart="280dp"
-        android:layout_marginTop="40dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView18"
-        app:srcCompat="@drawable/balls" />
-
-    <ImageView
-        android:id="@+id/imageView28"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="230dp"
-        android:layout_marginBottom="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/left_arrow" />
-
-    <ImageView
-        android:id="@+id/imageView29"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="340dp"
-        android:layout_marginBottom="30dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/right_arrow" />
-
-    <ImageView
-        android:id="@+id/imageView26"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView22"
-        app:layout_constraintEnd_toEndOf="@+id/imageView22"
-        app:layout_constraintStart_toStartOf="@+id/imageView22"
-        app:srcCompat="@drawable/bowling_ball" />
-
     <TextView
         android:id="@+id/textView13"
         android:layout_width="343dp"
@@ -189,5 +111,126 @@
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+
+    <!--    <com.google.android.material.button.MaterialButton-->
+    <!--        android:id="@+id/dragView"-->
+    <!--        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="40dp"-->
+    <!--        android:text="Complete the Customs Form"-->
+    <!--        android:textSize="10sp"-->
+    <!--        app:cornerRadius="1000dp"-->
+    <!--        tools:layout_editor_absoluteX="272dp"-->
+    <!--        tools:layout_editor_absoluteY="323dp" />-->
+
+
+    <!--    <LinearLayout-->
+    <!--        android:id="@+id/llLeft"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginStart="130dp"-->
+    <!--        android:layout_marginTop="60dp"-->
+    <!--        android:orientation="horizontal"-->
+    <!--        android:background="@android:color/darker_gray"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/imageView18">-->
+
+    <!--        <ImageView-->
+    <!--            android:id="@+id/imageView23"-->
+    <!--            android:layout_width="120dp"-->
+    <!--            android:layout_height="120dp"-->
+    <!--            app:srcCompat="@drawable/balls"-->
+    <!--            android:layout_gravity="center"/>-->
+    <!--    </LinearLayout>-->
+
+    <!--    <LinearLayout-->
+    <!--        android:id="@+id/llRight"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="60dp"-->
+    <!--        android:layout_marginEnd="130dp"-->
+    <!--        android:background="@android:color/darker_gray"-->
+    <!--        android:orientation="horizontal"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/imageView18">-->
+
+    <!--        <ImageView-->
+    <!--            android:layout_width="120dp"-->
+    <!--            android:layout_height="120dp"-->
+    <!--            android:layout_gravity="center"-->
+    <!--            app:srcCompat="@drawable/balls" />-->
+    <!--    </LinearLayout>-->
+
+    <TextView
+        android:id="@+id/dragView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="212dp"
+        android:gravity="center"
+        android:text="Complete the Customs Form"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView18"
+        android:background="@drawable/round"/>
+
+    <TextView
+        android:id="@+id/scoreText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="Scores: 10/10"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="140dp"
+        android:layout_marginBottom="140dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/rounded_border"
+        android:padding="5dp">
+        <TextView
+            android:id="@+id/word_one"
+            android:layout_width="100dp"
+            android:layout_height="130dp"
+            android:gravity="center_horizontal|bottom"
+            android:text="Word 1" />
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:srcCompat="@drawable/balls" />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="140dp"
+        android:layout_marginBottom="140dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/rounded_border"
+        android:padding="5dp">
+        <TextView
+            android:id="@+id/word_two"
+            android:layout_width="100dp"
+            android:layout_height="130dp"
+            android:gravity="center_horizontal|bottom"
+            android:text="Word 2" />
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            app:srcCompat="@drawable/balls" />
+    </RelativeLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

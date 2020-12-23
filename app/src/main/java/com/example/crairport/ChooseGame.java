@@ -37,10 +37,11 @@ public class ChooseGame extends AppCompatActivity {
     }
 
     public void onBowlingGame(View view) {
+        Intent currentScreen = getIntent();
         Intent nextScreen = new Intent(this, BowlingGame.class);
-        //Fix this later
-        //int level = currentScreen.getIntExtra("Level", 1);
-        //nextScreen.putExtra("Level", level);
+        String level = currentScreen.getStringExtra("Level");
+        // TODO: modify level according to firebase
+        nextScreen.putExtra("Level", level);
         startActivity(nextScreen);
     }
 }

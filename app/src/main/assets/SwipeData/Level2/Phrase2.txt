@@ -1,33 +1,3 @@
-have to confiscate this gun.
-have to weigh this item.
-have to check this bag.
-have to inspect the contents of that bag.
-have to see the contents of that bag.
-have to see your customs form and passport.
-have to retain your merchandise.
-have to speak with my manager.
-need to confiscate this gun.
-need to weigh this item.
-need to check this bag.
-need to inspect the contents of that bag.
-need to see the contents of that bag.
-need to see your customs form and passport.
-need to retain your merchandise.
-need to speak with my manager.
-have to call the warehouse.
-have to visit the warehouse.
-have to ask a customs broker.
-have to ask the warehouse staff.
-have to pay duty.
-have to hire a customs broker.
-have to pay the taxes.
-need to call the warehouse.
-need to visit the warehouse.
-need to ask a customs broker.
-need to ask the warehouse staff.
-need to pay duty.
-need to hire a customs broker.
-need to pay the taxes.
 form
 space
 space

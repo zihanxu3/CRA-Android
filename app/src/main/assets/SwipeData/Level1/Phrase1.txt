@@ -1,29 +1,41 @@
-Bring
-Come
-Complete
-Complete
-Follow
-Follow
-Go
-Have
-Lay
-Open
-Proceed
-Put
-Put
-Put
-Put
-Put
-Put
-Step
-Step
-Complete
-Complete
-Complete
-Complete
-Check
-Check
-Sign and date
-Keep
-Wait
-List
+Good morning
+Morning
+Good morning
+Good afternoon
+Afternoon
+Good afternoon
+Good evening
+Evening
+Good evening
+Hello
+Hello
+Hi
+How are you?
+How are you?
+How are you doing?
+How are you doing?
+How do you do?
+How do you do?
+Have a nice day
+Have a nice day
+Have a good day
+Have a good day
+Have a good weekend
+Have a good weekend
+Have a good week
+Have a good week
+Have a good night
+Have a good night
+Have a good one
+Have a good one
+Enjoy the rest of the day
+Enjoy the rest of the day
+Good night
+Good night
+Night
+Bye-bye
+Bye-bye
+Bye-bye
+Bye
+Bye
+Goodbye

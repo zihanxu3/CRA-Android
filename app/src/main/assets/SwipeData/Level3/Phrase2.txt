@@ -1,20 +1,48 @@
-bringing a firearm?
-have a firearm?
-bringing any auto parts?
-arriving with a group?
-traveling alone?
-have a prescription?
-have a receipt or invoice?
-have anything to declare?
-have anything to identify yourself?
-have the paperwork for these?
-have the paperwork for this?
-a resident?
-have to put my purse on the belt?
-have to put my backpack on the belt?
-both need a customs form?
-have a pen?
-have a customs form?
-have to take the liquids out?
-pay taxes here?
-have to pay any additional fees?
+Yes, I am.
+Yes, I do.
+Yes, I am.
+Yes, I am.
+Yes, I am.
+Yes, I do.
+Yes, I do.
+Yes, I do.
+Yes, I do.
+Yes, I do.
+Yes, I do.
+Yes, it it.
+Yes, they are.
+Yes, they are.
+Yes, it is.
+Yes, I am.
+Yes, it is.
+Yes, they are.
+No, I'm not.
+No, I don't.
+No, I'm not.
+No, I'm not.
+No, I'm not.
+No, I don't.
+No, I don't.
+No, I don't.
+No, I don't.
+No, I don't.
+No, I don't.
+No, it isn't.
+No, they aren't.
+No, they aren't.
+No, it isn't.
+No, I'm not.
+No, it isn't.
+No, they aren't.
+Yes, you do.
+Yes, you do.
+Yes, you do.
+Yes, I do.
+Yes, I do.
+No, you don't.
+No, you don't.
+I don't know.
+No, you don't.
+No, I don't.
+No, I don't.
+I am not sure.

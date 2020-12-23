@@ -30,7 +30,7 @@
         android:layout_marginTop="245dp"
         android:layout_marginEnd="25dp"
         android:onClick="onClickNotMatch"
-        android:text="Not match!"
+        android:text="No match!"
         android:textColor="@color/design_default_color_on_primary"
         android:textSize="10sp"
         app:backgroundTint="@color/design_default_color_error"
