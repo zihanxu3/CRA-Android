@@ -25,6 +25,9 @@ import android.view.View.OnDragListener;
 import android.view.View.OnTouchListener;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+
 import org.w3c.dom.Text;
 
 import java.io.BufferedReader;
@@ -263,6 +266,13 @@ public class BowlingGame extends AppCompatActivity implements GamePopFragment.Ga
         // Create an instance of the dialog fragment and show it
         DialogFragment dialog = new GamePopFragment(s) ;
         dialog.show(getFragmentManager(), "Complete Activity Listener");
+
+        // TODO: Update this for every level
+        int level = 1;
+        double correct = currentPoints * 1.0 / totalPoints;
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        FirebaseFunctions functions = new FirebaseFunctions(user);
+        functions.createReport("Bowling Game", level, correct);
     }
 
     // The dialog fragment receives a reference to this Activity through the

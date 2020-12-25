@@ -34,21 +34,22 @@ public class FirebaseFunctions {
         this.user = user;
     }
 
-    public HashMap<String, Object> getStarterInfo () {
-        HashMap<String, Object> userInfo = new HashMap<>();
+    /**
+     * Gneerates a report to send to Firebase
+     * @param game name of the game
+     * @param level current level played on
+     * @param correct percent correct
+     */
+    public void createReport(String game, int level, double correct) {
         String email = user.getEmail();
-        FirebaseFirestore.getInstance().collection(userCollection).document(email).get()
-                .addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-                    @Override
-                    public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                        if (task.isComplete()) {
-                            DocumentSnapshot documentSnapshot = task.getResult();
-                            userInfo.put(firstNameField, documentSnapshot.get(firstNameField));
-                            userInfo.put(experienceField, documentSnapshot.get(experienceField));
-                            userInfo.put(levelField, documentSnapshot.get(levelField));
-                        }
-                    }
-                });
-        return userInfo;
+
+        HashMap<String, Object> data = new HashMap<>();
+        data.put("Game", game);
+        data.put("Level", level);
+        data.put("Percent Correct", correct);
+
+        FirebaseFirestore.getInstance().collection("users").document(email)
+                .collection("report").document("Previous Game")
+                .set(data);
     }
 }
