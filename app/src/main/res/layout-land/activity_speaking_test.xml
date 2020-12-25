@@ -101,11 +101,12 @@
         app:layout_constraintVertical_bias="0.383" />
 
     <ImageView
-        android:id="@+id/imageView10"
+        android:id="@+id/recordButton"
         android:layout_width="49dp"
         android:layout_height="39dp"
         android:layout_marginEnd="200dp"
         android:layout_marginBottom="150dp"
+        android:onClick="onRecording"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@android:drawable/ic_btn_speak_now" />
