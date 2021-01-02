@@ -42,10 +42,11 @@ public class SpeakingTest extends AppCompatActivity {
 
         // Read file
         Intent current = getIntent();
-        // Change this for every level
+        int level = current.getIntExtra("level", 1);
+
         ArrayList<String> allPossible = new ArrayList<>();
         try {
-            InputStream in = getAssets().open("LevelData/Level1Phrases.txt");
+            InputStream in = getAssets().open("LevelData/Level" + level + "Phrases.txt");
             BufferedReader bf = new BufferedReader(new InputStreamReader(in));
             String phrase = "";
             while ((phrase = bf.readLine()) != null) {
@@ -71,10 +72,11 @@ public class SpeakingTest extends AppCompatActivity {
     public void onClickAudio(View view) {
         // Read file
         Intent current = getIntent();
-        // Change this for every level
+        int level = current.getIntExtra("level", 1);
+
         ArrayList<String> allPossible = new ArrayList<>();
         try {
-            InputStream in = getAssets().open("LevelData/Level1Audio.txt");
+            InputStream in = getAssets().open("LevelData/Level" + level + "Audio.txt");
             BufferedReader bf = new BufferedReader(new InputStreamReader(in));
             String audio = "";
             while ((audio = bf.readLine()) != null) {

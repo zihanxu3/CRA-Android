@@ -23,7 +23,7 @@ public class ChooseGame extends AppCompatActivity {
         String mode = "image";
 
         // TODO: `mode` is adaptive to the game process, it takes values `phrase` or `image`
-        nextScreen.putExtra("Level", level);
+        nextScreen.putExtra("level", level);
         nextScreen.putExtra("Mode", mode);
         startActivity(nextScreen);
     }

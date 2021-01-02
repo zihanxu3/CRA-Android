@@ -1,0 +1,14 @@
+You have to call the warehouse
+You have to visit the warehouse
+You have to ask a customs broker
+You have to ask the warehouse staff
+You have to pay duty
+You have to hire a customs broker
+You have to pay the taxes
+You need to call the warehouse
+You need to visit the warehouse
+You need to ask a customs broker
+You need to ask the warehouse staff
+You need to pay duty
+You need to hire a customs broker
+You need to pay the taxes
