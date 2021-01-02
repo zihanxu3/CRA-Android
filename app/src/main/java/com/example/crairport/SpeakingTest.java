@@ -101,7 +101,8 @@ public class SpeakingTest extends AppCompatActivity {
 
     public void onRecording(View view) {
 
-        //This works but this needs to be tested on an actual device
+        //TODO: This works but this needs to be tested on an actual device
+        // You might have to fix this for future android versions as well
         if (!isRecording) {
             try {
                 recorder = new MediaRecorder();

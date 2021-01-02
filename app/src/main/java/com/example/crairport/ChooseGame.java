@@ -19,7 +19,7 @@ public class ChooseGame extends AppCompatActivity {
         Intent nextScreen = new Intent(this, SwipeActivity.class);
 
         Intent currentScreen = getIntent();
-        String level = currentScreen.getStringExtra("Level");
+        int level = currentScreen.getIntExtra("level", 1);
         String mode = "image";
 
         // TODO: `mode` is adaptive to the game process, it takes values `phrase` or `image`
@@ -30,18 +30,16 @@ public class ChooseGame extends AppCompatActivity {
 
     public void onSpeakingGame(View view) {
         Intent nextScreen = new Intent(this, SpeakingTest.class);
-        //Fix this later
-        //int level = currentScreen.getIntExtra("Level", 1);
-        //nextScreen.putExtra("Level", level);
+        int level = this.getIntent().getIntExtra("level", 1);
+        nextScreen.putExtra("level", level);
         startActivity(nextScreen);
     }
 
     public void onBowlingGame(View view) {
         Intent currentScreen = getIntent();
         Intent nextScreen = new Intent(this, BowlingGame.class);
-        String level = currentScreen.getStringExtra("Level");
-        // TODO: modify level according to firebase
-        nextScreen.putExtra("Level", level);
+        int level = currentScreen.getIntExtra("level", 1);
+        nextScreen.putExtra("level", level);
         startActivity(nextScreen);
     }
 }

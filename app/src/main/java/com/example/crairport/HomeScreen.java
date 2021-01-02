@@ -54,8 +54,36 @@ public class HomeScreen extends AppCompatActivity {
                 });
     }
 
-    public void clickedLevelOne(View view) {
+    /**
+     * Goes to user indicated level
+     * @param view the element clicked on
+     */
+    public void clickedLevel(View view) {
         Intent nextScreen = new Intent(this, MapActivity.class);
+        //TODO: We did not do level progression yet, but if needed check what level
+        // the user is in currently here
+
+        int level = 0;
+        switch (view.getId()) {
+            case R.id.LevelOneImage:
+                level = 1;
+                break;
+            case R.id.LevelTwoImage:
+                level = 2;
+                break;
+            case R.id.levelThreeImage:
+                level = 3;
+                break;
+            case R.id.levelFourImage:
+                level = 4;
+                break;
+            case R.id.levelFiveImage:
+                level = 5;
+                break;
+            default:
+                level = 1;
+        }
+        nextScreen.putExtra("level", level);
         startActivity(nextScreen);
     }
 }

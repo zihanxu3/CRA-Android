@@ -109,7 +109,7 @@
                         android:layout_width="400px"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:onClick="clickedLevelOne"
+                        android:onClick="clickedLevel"
                         app:srcCompat="@drawable/level_card_7" />
 
                     <TextView
@@ -145,6 +145,7 @@
                         android:layout_width="400px"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:onClick="clickedLevel"
                         app:srcCompat="@drawable/level_card_6" />
 
                     <TextView
@@ -175,10 +176,11 @@
                     android:layout_weight="1">
 
                     <ImageView
-                        android:id="@+id/imageView8"
+                        android:id="@+id/levelThreeImage"
                         android:layout_width="400px"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:onClick="clickedLevel"
                         app:srcCompat="@drawable/level_card_5" />
 
                     <TextView
@@ -208,10 +210,11 @@
                     android:layout_weight="1">
 
                     <ImageView
-                        android:id="@+id/imageView7"
+                        android:id="@+id/levelFourImage"
                         android:layout_width="400px"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:onClick="clickedLevel"
                         app:srcCompat="@drawable/level_card_4" />
 
                     <TextView
@@ -241,10 +244,11 @@
                     android:layout_weight="1">
 
                     <ImageView
-                        android:id="@+id/imageView6"
+                        android:id="@+id/levelFiveImage"
                         android:layout_width="400px"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
+                        android:onClick="clickedLevel"
                         app:srcCompat="@drawable/level_card_3" />
 
                     <TextView
