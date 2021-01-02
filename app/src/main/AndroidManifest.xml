@@ -28,7 +28,6 @@
         <activity
             android:name=".ChooseGame"
             android:screenOrientation="landscape" />
-        <activity android:name=".MatchingGame" />
 
         <activity
             android:name=".SwipeActivity"

@@ -49,7 +49,6 @@ public class FirebaseFunctions {
         data.put("Percent Correct", correct);
 
         FirebaseFirestore.getInstance().collection("users").document(email)
-                .collection("report").document("Previous Game")
-                .set(data);
+                .collection("reports").document().set(data);
     }
 }

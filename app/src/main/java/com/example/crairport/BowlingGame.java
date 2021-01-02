@@ -48,6 +48,7 @@ public class BowlingGame extends AppCompatActivity implements GamePopFragment.Ga
     ArrayList<String> phraseOneArray = new ArrayList<>();
     ArrayList<String> phraseTwoArray = new ArrayList<>();
     int currentCorrectId;
+    int currentLevel = 1;
 
     @SuppressLint("ClickableViewAccessibility")
     @Override
@@ -57,7 +58,8 @@ public class BowlingGame extends AppCompatActivity implements GamePopFragment.Ga
 
         Intent current = getIntent();
 
-        String level = current.getStringExtra("Level");
+        currentLevel = current.getIntExtra("level", 1);
+
         // View to drag
         dragView = (TextView) findViewById(R.id.dragView);
 
@@ -76,12 +78,12 @@ public class BowlingGame extends AppCompatActivity implements GamePopFragment.Ga
 
 
 
-        String fileName1 = String.format("SwipeData/Level%s/Phrase1.txt", level);
-        String fileName2 = String.format("SwipeData/Level%s/Phrase2.txt", level);
+        String fileName1 = String.format("SwipeData/Level%s/Phrase1.txt", currentLevel);
+        String fileName2 = String.format("SwipeData/Level%s/Phrase2.txt", currentLevel);
 
         System.out.println("reached line 41");
         System.out.println(fileName1);
-        // Change this for every level
+
         try {
             InputStream in = getAssets().open(fileName1);
             BufferedReader bf = new BufferedReader(new InputStreamReader(in));
@@ -268,11 +270,10 @@ public class BowlingGame extends AppCompatActivity implements GamePopFragment.Ga
         dialog.show(getFragmentManager(), "Complete Activity Listener");
 
         // TODO: Update this for every level
-        int level = 1;
         double correct = currentPoints * 1.0 / totalPoints;
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         FirebaseFunctions functions = new FirebaseFunctions(user);
-        functions.createReport("Bowling Game", level, correct);
+        functions.createReport("Bowling Game", currentLevel, correct);
     }
 
     // The dialog fragment receives a reference to this Activity through the

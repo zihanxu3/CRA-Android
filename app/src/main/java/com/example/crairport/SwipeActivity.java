@@ -32,6 +32,7 @@ public class SwipeActivity extends AppCompatActivity implements GamePopFragment.
     String mode = "";
     ArrayList<String> phraseOneArray = new ArrayList<>();
     ArrayList<String> phraseTwoArray = new ArrayList<>();
+    int currentLevel = 1;
 
 
 
@@ -43,12 +44,12 @@ public class SwipeActivity extends AppCompatActivity implements GamePopFragment.
         // Read file
         Intent current = getIntent();
 
-        String level = current.getStringExtra("Level");
+        currentLevel = current.getIntExtra("level", 1);
         this.mode = current.getStringExtra("Mode");
 
         if (mode.equals("phrase")) {
-            String fileName1 = String.format("SwipeData/Level%s/Phrase1.txt", level);
-            String fileName2 = String.format("SwipeData/Level%s/Phrase2.txt", level);
+            String fileName1 = String.format("SwipeData/Level%s/Phrase1.txt", currentLevel);
+            String fileName2 = String.format("SwipeData/Level%s/Phrase2.txt", currentLevel);
 
             System.out.println("reached line 41");
             System.out.println(fileName1);
@@ -83,8 +84,8 @@ public class SwipeActivity extends AppCompatActivity implements GamePopFragment.
                 e.printStackTrace();
             }
         } else {
-            String fileName1 = String.format("SwipeData/Level%s/Image.txt", level);
-            String fileName2 = String.format("SwipeData/Level%s/Phrase.txt", level);
+            String fileName1 = String.format("SwipeData/Level%s/Image.txt", currentLevel);
+            String fileName2 = String.format("SwipeData/Level%s/Phrase.txt", currentLevel);
 
             System.out.println("reached line 41");
             System.out.println(fileName1);
@@ -275,12 +276,10 @@ public class SwipeActivity extends AppCompatActivity implements GamePopFragment.
         DialogFragment dialog = new GamePopFragment(s) ;
         dialog.show(getFragmentManager(), "Complete Activity Listener");
 
-        // TODO: Update this for every level
-        int level = 1;
         double correct = currentPoints * 1.0 / totalPoints;
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         FirebaseFunctions functions = new FirebaseFunctions(user);
-        functions.createReport("Match 'n Swipe", level, correct);
+        functions.createReport("Match 'n Swipe", currentLevel, correct);
     }
 
     // The dialog fragment receives a reference to this Activity through the
